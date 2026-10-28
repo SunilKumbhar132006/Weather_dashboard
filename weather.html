@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="weather.css" />
+</head>
+
+<body>
+  <div class="dashboard-container">
+    <header class="header">
+      <h1>Weather Dashboard</h1>
+      <p class="subtitle">Search for any city to see current weather and forecast</p>
+    </header>
+
+    <main>
+      <!-- Search Form -->
+      <form id="search-form" class="search-form">
+        <input type="text" id="city-input" placeholder="Enter city name..." autocomplete="off" />
+        <button type="submit" id="search-btn">Search</button>
+      </form>
+
+      <!-- Loading Indicator -->
+      <div id="loading" class="loading hidden" aria-live="polite">
+        <div class="spinner"></div>
+        <p>Fetching weather data...</p>
+      </div>
+
+      <!-- Error Message -->
+      <div id="error-message" class="error-card hidden" role="alert"></div>
+
+      <!-- Weather Results Container -->
+      <div id="weather-results" class="weather-results hidden"></div>
+    </main>
+  </div>
+
+  <script src="weather.js"></script>
+</body>
+
+</html>
